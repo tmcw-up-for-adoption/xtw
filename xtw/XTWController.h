@@ -12,5 +12,6 @@
 {
     NSStatusItem *statusItem;
     NSMenu *menu;
+    NSTimer *automaticUpdateTimer;
 }
 @end
