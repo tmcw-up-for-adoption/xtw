@@ -19,6 +19,8 @@
 		911B2620147BFB1E005D15AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911B261E147BFB1E005D15AE /* InfoPlist.strings */; };
 		911B2623147BFB1E005D15AE /* xtwTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B2622147BFB1E005D15AE /* xtwTests.m */; };
 		911B2637147BFE31005D15AE /* XTWController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B2636147BFE31005D15AE /* XTWController.m */; };
+		914BB918147C3B7E00F49FDD /* xtw.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BB917147C3B7E00F49FDD /* xtw.png */; };
+		914BB91B147C3C2D00F49FDD /* xtw.icns in Resources */ = {isa = PBXBuildFile; fileRef = 914BB91A147C3C2C00F49FDD /* xtw.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		911B2622147BFB1E005D15AE /* xtwTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xtwTests.m; sourceTree = "<group>"; };
 		911B2635147BFE31005D15AE /* XTWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTWController.h; sourceTree = "<group>"; };
 		911B2636147BFE31005D15AE /* XTWController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTWController.m; sourceTree = "<group>"; };
+		914BB917147C3B7E00F49FDD /* xtw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xtw.png; sourceTree = "<group>"; };
+		914BB91A147C3C2C00F49FDD /* xtw.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = xtw.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		911B25E6147BFB1E005D15AE = {
 			isa = PBXGroup;
 			children = (
+				914BB91A147C3C2C00F49FDD /* xtw.icns */,
+				914BB917147C3B7E00F49FDD /* xtw.png */,
 				911B25FB147BFB1E005D15AE /* xtw */,
 				911B261B147BFB1E005D15AE /* xtwTests */,
 				911B25F4147BFB1E005D15AE /* Frameworks */,
@@ -234,6 +240,8 @@
 				911B2600147BFB1E005D15AE /* InfoPlist.strings in Resources */,
 				911B2606147BFB1E005D15AE /* Credits.rtf in Resources */,
 				911B260C147BFB1E005D15AE /* MainMenu.xib in Resources */,
+				914BB918147C3B7E00F49FDD /* xtw.png in Resources */,
+				914BB91B147C3C2D00F49FDD /* xtw.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +451,7 @@
 				911B2628147BFB1E005D15AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		911B2629147BFB1E005D15AE /* Build configuration list for PBXNativeTarget "xtwTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +460,7 @@
 				911B262B147BFB1E005D15AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
