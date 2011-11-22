@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		911B25F6147BFB1E005D15AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911B25F5147BFB1E005D15AE /* Cocoa.framework */; };
+		911B2600147BFB1E005D15AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911B25FE147BFB1E005D15AE /* InfoPlist.strings */; };
+		911B2602147BFB1E005D15AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B2601147BFB1E005D15AE /* main.m */; };
+		911B2606147BFB1E005D15AE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 911B2604147BFB1E005D15AE /* Credits.rtf */; };
+		911B2609147BFB1E005D15AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B2608147BFB1E005D15AE /* AppDelegate.m */; };
+		911B260C147BFB1E005D15AE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911B260A147BFB1E005D15AE /* MainMenu.xib */; };
+		911B260F147BFB1E005D15AE /* xtw.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 911B260D147BFB1E005D15AE /* xtw.xcdatamodeld */; };
+		911B2617147BFB1E005D15AE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911B2616147BFB1E005D15AE /* SenTestingKit.framework */; };
+		911B2618147BFB1E005D15AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911B25F5147BFB1E005D15AE /* Cocoa.framework */; };
+		911B2620147BFB1E005D15AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911B261E147BFB1E005D15AE /* InfoPlist.strings */; };
+		911B2623147BFB1E005D15AE /* xtwTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B2622147BFB1E005D15AE /* xtwTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		911B2619147BFB1E005D15AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 911B25E8147BFB1E005D15AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 911B25F0147BFB1E005D15AE;
+			remoteInfo = xtw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		911B25F1147BFB1E005D15AE /* xtw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xtw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		911B25F5147BFB1E005D15AE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		911B25F8147BFB1E005D15AE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		911B25F9147BFB1E005D15AE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		911B25FA147BFB1E005D15AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		911B25FD147BFB1E005D15AE /* xtw-Info.plist */ = {isa = PBXFileReference; path = "xtw-Info.plist"; sourceTree = "<group>"; };
+		911B25FF147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		911B2601147BFB1E005D15AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		911B2603147BFB1E005D15AE /* xtw-Prefix.pch */ = {isa = PBXFileReference; path = "xtw-Prefix.pch"; sourceTree = "<group>"; };
+		911B2605147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		911B2607147BFB1E005D15AE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		911B2608147BFB1E005D15AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		911B260B147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		911B260E147BFB1E005D15AE /* xtw.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = xtw.xcdatamodel; sourceTree = "<group>"; };
+		911B2615147BFB1E005D15AE /* xtwTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xtwTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		911B2616147BFB1E005D15AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		911B261D147BFB1E005D15AE /* xtwTests-Info.plist */ = {isa = PBXFileReference; path = "xtwTests-Info.plist"; sourceTree = "<group>"; };
+		911B261F147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		911B2621147BFB1E005D15AE /* xtwTests.h */ = {isa = PBXFileReference; path = xtwTests.h; sourceTree = "<group>"; };
+		911B2622147BFB1E005D15AE /* xtwTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xtwTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		911B25EE147BFB1E005D15AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911B25F6147BFB1E005D15AE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911B2611147BFB1E005D15AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911B2617147BFB1E005D15AE /* SenTestingKit.framework in Frameworks */,
+				911B2618147BFB1E005D15AE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		911B25E6147BFB1E005D15AE = {
+			isa = PBXGroup;
+			children = (
+				911B25FB147BFB1E005D15AE /* xtw */,
+				911B261B147BFB1E005D15AE /* xtwTests */,
+				911B25F4147BFB1E005D15AE /* Frameworks */,
+				911B25F2147BFB1E005D15AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		911B25F2147BFB1E005D15AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				911B25F1147BFB1E005D15AE /* xtw.app */,
+				911B2615147BFB1E005D15AE /* xtwTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		911B25F4147BFB1E005D15AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				911B25F5147BFB1E005D15AE /* Cocoa.framework */,
+				911B2616147BFB1E005D15AE /* SenTestingKit.framework */,
+				911B25F7147BFB1E005D15AE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		911B25F7147BFB1E005D15AE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				911B25F8147BFB1E005D15AE /* AppKit.framework */,
+				911B25F9147BFB1E005D15AE /* CoreData.framework */,
+				911B25FA147BFB1E005D15AE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		911B25FB147BFB1E005D15AE /* xtw */ = {
+			isa = PBXGroup;
+			children = (
+				911B2607147BFB1E005D15AE /* AppDelegate.h */,
+				911B2608147BFB1E005D15AE /* AppDelegate.m */,
+				911B260A147BFB1E005D15AE /* MainMenu.xib */,
+				911B260D147BFB1E005D15AE /* xtw.xcdatamodeld */,
+				911B25FC147BFB1E005D15AE /* Supporting Files */,
+			);
+			path = xtw;
+			sourceTree = "<group>";
+		};
+		911B25FC147BFB1E005D15AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				911B25FD147BFB1E005D15AE /* xtw-Info.plist */,
+				911B25FE147BFB1E005D15AE /* InfoPlist.strings */,
+				911B2601147BFB1E005D15AE /* main.m */,
+				911B2603147BFB1E005D15AE /* xtw-Prefix.pch */,
+				911B2604147BFB1E005D15AE /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		911B261B147BFB1E005D15AE /* xtwTests */ = {
+			isa = PBXGroup;
+			children = (
+				911B2621147BFB1E005D15AE /* xtwTests.h */,
+				911B2622147BFB1E005D15AE /* xtwTests.m */,
+				911B261C147BFB1E005D15AE /* Supporting Files */,
+			);
+			path = xtwTests;
+			sourceTree = "<group>";
+		};
+		911B261C147BFB1E005D15AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				911B261D147BFB1E005D15AE /* xtwTests-Info.plist */,
+				911B261E147BFB1E005D15AE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		911B25F0147BFB1E005D15AE /* xtw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 911B2626147BFB1E005D15AE /* Build configuration list for PBXNativeTarget "xtw" */;
+			buildPhases = (
+				911B25ED147BFB1E005D15AE /* Sources */,
+				911B25EE147BFB1E005D15AE /* Frameworks */,
+				911B25EF147BFB1E005D15AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xtw;
+			productName = xtw;
+			productReference = 911B25F1147BFB1E005D15AE /* xtw.app */;
+			productType = "com.apple.product-type.application";
+		};
+		911B2614147BFB1E005D15AE /* xtwTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 911B2629147BFB1E005D15AE /* Build configuration list for PBXNativeTarget "xtwTests" */;
+			buildPhases = (
+				911B2610147BFB1E005D15AE /* Sources */,
+				911B2611147BFB1E005D15AE /* Frameworks */,
+				911B2612147BFB1E005D15AE /* Resources */,
+				911B2613147BFB1E005D15AE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				911B261A147BFB1E005D15AE /* PBXTargetDependency */,
+			);
+			name = xtwTests;
+			productName = xtwTests;
+			productReference = 911B2615147BFB1E005D15AE /* xtwTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		911B25E8147BFB1E005D15AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 911B25EB147BFB1E005D15AE /* Build configuration list for PBXProject "xtw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 911B25E6147BFB1E005D15AE;
+			productRefGroup = 911B25F2147BFB1E005D15AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				911B25F0147BFB1E005D15AE /* xtw */,
+				911B2614147BFB1E005D15AE /* xtwTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		911B25EF147BFB1E005D15AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911B2600147BFB1E005D15AE /* InfoPlist.strings in Resources */,
+				911B2606147BFB1E005D15AE /* Credits.rtf in Resources */,
+				911B260C147BFB1E005D15AE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911B2612147BFB1E005D15AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911B2620147BFB1E005D15AE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		911B2613147BFB1E005D15AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		911B25ED147BFB1E005D15AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911B2602147BFB1E005D15AE /* main.m in Sources */,
+				911B2609147BFB1E005D15AE /* AppDelegate.m in Sources */,
+				911B260F147BFB1E005D15AE /* xtw.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911B2610147BFB1E005D15AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				911B2623147BFB1E005D15AE /* xtwTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		911B261A147BFB1E005D15AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 911B25F0147BFB1E005D15AE /* xtw */;
+			targetProxy = 911B2619147BFB1E005D15AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		911B25FE147BFB1E005D15AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				911B25FF147BFB1E005D15AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		911B2604147BFB1E005D15AE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				911B2605147BFB1E005D15AE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		911B260A147BFB1E005D15AE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				911B260B147BFB1E005D15AE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		911B261E147BFB1E005D15AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				911B261F147BFB1E005D15AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		911B2624147BFB1E005D15AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		911B2625147BFB1E005D15AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		911B2627147BFB1E005D15AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xtw/xtw-Prefix.pch";
+				INFOPLIST_FILE = "xtw/xtw-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		911B2628147BFB1E005D15AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xtw/xtw-Prefix.pch";
+				INFOPLIST_FILE = "xtw/xtw-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		911B262A147BFB1E005D15AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/xtw.app/Contents/MacOS/xtw";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xtw/xtw-Prefix.pch";
+				INFOPLIST_FILE = "xtwTests/xtwTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		911B262B147BFB1E005D15AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/xtw.app/Contents/MacOS/xtw";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xtw/xtw-Prefix.pch";
+				INFOPLIST_FILE = "xtwTests/xtwTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		911B25EB147BFB1E005D15AE /* Build configuration list for PBXProject "xtw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911B2624147BFB1E005D15AE /* Debug */,
+				911B2625147BFB1E005D15AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		911B2626147BFB1E005D15AE /* Build configuration list for PBXNativeTarget "xtw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911B2627147BFB1E005D15AE /* Debug */,
+				911B2628147BFB1E005D15AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		911B2629147BFB1E005D15AE /* Build configuration list for PBXNativeTarget "xtwTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				911B262A147BFB1E005D15AE /* Debug */,
+				911B262B147BFB1E005D15AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		911B260D147BFB1E005D15AE /* xtw.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				911B260E147BFB1E005D15AE /* xtw.xcdatamodel */,
+			);
+			currentVersion = 911B260E147BFB1E005D15AE /* xtw.xcdatamodel */;
+			path = xtw.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 911B25E8147BFB1E005D15AE /* Project object */;
+}
