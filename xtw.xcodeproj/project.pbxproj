@@ -18,6 +18,7 @@
 		911B2618147BFB1E005D15AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911B25F5147BFB1E005D15AE /* Cocoa.framework */; };
 		911B2620147BFB1E005D15AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911B261E147BFB1E005D15AE /* InfoPlist.strings */; };
 		911B2623147BFB1E005D15AE /* xtwTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B2622147BFB1E005D15AE /* xtwTests.m */; };
+		911B2637147BFE31005D15AE /* XTWController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911B2636147BFE31005D15AE /* XTWController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +37,23 @@
 		911B25F8147BFB1E005D15AE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		911B25F9147BFB1E005D15AE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		911B25FA147BFB1E005D15AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		911B25FD147BFB1E005D15AE /* xtw-Info.plist */ = {isa = PBXFileReference; path = "xtw-Info.plist"; sourceTree = "<group>"; };
+		911B25FD147BFB1E005D15AE /* xtw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xtw-Info.plist"; sourceTree = "<group>"; };
 		911B25FF147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		911B2601147BFB1E005D15AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		911B2603147BFB1E005D15AE /* xtw-Prefix.pch */ = {isa = PBXFileReference; path = "xtw-Prefix.pch"; sourceTree = "<group>"; };
+		911B2603147BFB1E005D15AE /* xtw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xtw-Prefix.pch"; sourceTree = "<group>"; };
 		911B2605147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		911B2607147BFB1E005D15AE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		911B2607147BFB1E005D15AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		911B2608147BFB1E005D15AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		911B260B147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		911B260E147BFB1E005D15AE /* xtw.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = xtw.xcdatamodel; sourceTree = "<group>"; };
 		911B2615147BFB1E005D15AE /* xtwTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xtwTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		911B2616147BFB1E005D15AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		911B261D147BFB1E005D15AE /* xtwTests-Info.plist */ = {isa = PBXFileReference; path = "xtwTests-Info.plist"; sourceTree = "<group>"; };
+		911B261D147BFB1E005D15AE /* xtwTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xtwTests-Info.plist"; sourceTree = "<group>"; };
 		911B261F147BFB1E005D15AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		911B2621147BFB1E005D15AE /* xtwTests.h */ = {isa = PBXFileReference; path = xtwTests.h; sourceTree = "<group>"; };
+		911B2621147BFB1E005D15AE /* xtwTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xtwTests.h; sourceTree = "<group>"; };
 		911B2622147BFB1E005D15AE /* xtwTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xtwTests.m; sourceTree = "<group>"; };
+		911B2635147BFE31005D15AE /* XTWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTWController.h; sourceTree = "<group>"; };
+		911B2636147BFE31005D15AE /* XTWController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTWController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				911B260A147BFB1E005D15AE /* MainMenu.xib */,
 				911B260D147BFB1E005D15AE /* xtw.xcdatamodeld */,
 				911B25FC147BFB1E005D15AE /* Supporting Files */,
+				911B2635147BFE31005D15AE /* XTWController.h */,
+				911B2636147BFE31005D15AE /* XTWController.m */,
 			);
 			path = xtw;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				911B2602147BFB1E005D15AE /* main.m in Sources */,
 				911B2609147BFB1E005D15AE /* AppDelegate.m in Sources */,
 				911B260F147BFB1E005D15AE /* xtw.xcdatamodeld in Sources */,
+				911B2637147BFE31005D15AE /* XTWController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

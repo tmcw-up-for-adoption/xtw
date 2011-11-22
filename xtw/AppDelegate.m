@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XTWController.h"
 
 @implementation AppDelegate
 
@@ -26,6 +27,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    XTWController *xtw = [XTWController alloc];
+    [xtw init];
 }
 
 /**
