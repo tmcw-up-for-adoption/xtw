@@ -13,6 +13,7 @@
     NSStatusItem *statusItem;
     NSMenu *menu;
     NSTimer *automaticUpdateTimer;
+    NSString *pendingPath;
     NSMenuItem *quitMI;
     NSMenuItem *aboutMI;
 }

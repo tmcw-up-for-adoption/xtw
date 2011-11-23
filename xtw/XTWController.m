@@ -18,12 +18,17 @@
     NSFont *displayFont = [NSFont fontWithName:@"Helvetica Neue" size:20];
     if (!displayFont)
         displayFont = [NSFont boldSystemFontOfSize:22];
+        
+    NSString *taskcontents = [NSString stringWithContentsOfFile:pendingPath encoding:NSASCIIStringEncoding error:&err];
     
-    NSString *taskcontents = [NSString stringWithContentsOfFile:[@"~/.task/pending.data" stringByExpandingTildeInPath] encoding:NSASCIIStringEncoding error:err];
+    if (err) {
+        statusTitle = @"install taskwarrior";
+    } else {
+        NSArray *tasks = [taskcontents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     
-    NSArray *tasks = [taskcontents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        statusTitle = [NSString stringWithFormat:@"%d", [tasks count]];
+    }
     
-    statusTitle = [NSString stringWithFormat:@"%d", [tasks count]];
     
     [statusItem setAttributedTitle:[[[NSAttributedString alloc] initWithString:statusTitle attributes:menuAttributes] autorelease]];
 }
@@ -32,12 +37,18 @@
 	self = [super init];
 	if(self)
 	{
+        NSString *pendingPath = [NSString stringWithContentsOfFile:[@"~/.task/pending.data" stringByExpandingTildeInPath]];
+
 		menu                     = [[NSMenu alloc] init];
+        
+        // Set up my status item
         statusItem               = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
         [statusItem setMenu:menu];
         [statusItem retain];
         [statusItem setToolTip:@"taskwarrior"];
         [statusItem setHighlightMode:YES];
+        
+        // Set up the menu
         quitMI = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quit",@"") 
                                              action:@selector(terminate:) 
                                       keyEquivalent:@""] autorelease];
@@ -45,18 +56,20 @@
         aboutMI = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"About xtw",@"")
                                               action:@selector(orderFrontStandardAboutPanel:)
                                        keyEquivalent:@""] autorelease];
-        
         [quitMI setTarget:NSApp];	
         [aboutMI setTarget:NSApp];
         [menu addItem:aboutMI];
         [menu addItem:[NSMenuItem separatorItem]];
         [menu addItem:quitMI];
         
+        // Keep the thing updated
         automaticUpdateTimer     = [[NSTimer scheduledTimerWithTimeInterval:10
 																	 target:self
 																   selector:@selector(downloadNewDataTimerFired) 
 																   userInfo:nil 
 																	repeats:YES] retain];
+        
+        // Run the initial update
         [self updateCount];
     }
 }
