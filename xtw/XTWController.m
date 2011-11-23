@@ -16,14 +16,15 @@
     NSInteger timestamp = (long)[[NSDate date] timeIntervalSince1970];
     NSInteger overdue = 0;
     
-    NSMutableArray *taskData = nil;
-    
     NSMutableDictionary *menuAttributes = [NSMutableDictionary dictionary];
-    NSFont *displayFont = [NSFont fontWithName:@"Helvetica Neue"
-                                          size:20];
-    if (!displayFont)
-        displayFont = [NSFont boldSystemFontOfSize:22];
         
+    [menuAttributes setObject:[NSFont fontWithName:@"Helvetica Neue"
+											  size:12]
+                                            forKey:NSFontAttributeName];
+    
+    [menuAttributes setObject:[NSColor redColor]
+                       forKey:NSForegroundColorAttributeName];	
+    
     taskContents = [NSString stringWithContentsOfFile:pendingPath
                                              encoding:NSASCIIStringEncoding
                                                 error:&err];
@@ -49,13 +50,12 @@
             }
         }
         if (overdue > 0) {
-            statusTitle = [NSString stringWithFormat:@"%d | %d", overdue, [tasks count]];
+            statusTitle = [NSString stringWithFormat:@"%d (%d)", [tasks count], overdue];
         } else {
             statusTitle = [NSString stringWithFormat:@"%d", [tasks count]];
         }
     }
-    
-    
+
     [statusItem setAttributedTitle:[[[NSAttributedString alloc]
                                      initWithString:statusTitle
                                      attributes:menuAttributes] autorelease]];
@@ -101,6 +101,7 @@
         // Run the initial update
         [self updateCount];
     }
+    return self;
 }
 - (void)downloadNewDataTimerFired
 {
