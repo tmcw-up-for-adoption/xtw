@@ -14,6 +14,8 @@
     NSString *statusTitle = nil;
     NSError *err = nil;
     
+    NSMutableArray *taskData = nil;
+    
     NSMutableDictionary *menuAttributes = [NSMutableDictionary dictionary];
     NSFont *displayFont = [NSFont fontWithName:@"Helvetica Neue" size:20];
     if (!displayFont)
@@ -25,6 +27,19 @@
         statusTitle = @"install taskwarrior";
     } else {
         NSArray *tasks = [taskcontents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        
+        NSEnumerator *e = [tasks objectEnumerator];
+        id object;
+        NSInteger dueDate;
+        NSScanner *dueScanner;
+        while (object = [e nextObject]) {
+            dueScanner = [NSScanner scannerWithString:object];
+            [dueScanner scanString:@"due\"" intoString:NULL];
+            if ([dueScanner isAtEnd] == NO) {
+                [dueScanner scanInteger:&dueDate];
+                NSLog(@"due date: %@", dueDate);
+            }
+        }
     
         statusTitle = [NSString stringWithFormat:@"%d", [tasks count]];
     }
@@ -37,8 +52,8 @@
 	self = [super init];
 	if(self)
 	{
-        NSString *pendingPath = [NSString stringWithContentsOfFile:[@"~/.task/pending.data" stringByExpandingTildeInPath]];
-
+        pendingPath = [[NSString alloc] retain];
+        pendingPath = [@"~/.task/pending.data" stringByExpandingTildeInPath];
 		menu                     = [[NSMenu alloc] init];
         
         // Set up my status item
