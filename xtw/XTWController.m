@@ -18,18 +18,18 @@
     
     NSMutableDictionary *menuAttributes = [NSMutableDictionary dictionary];
         
-    [menuAttributes setObject:[NSFont fontWithName:@"Helvetica Neue"
-											  size:12]
+    [menuAttributes setObject:[NSFont fontWithName:@"Lucida Grande"
+											  size:14]
                                             forKey:NSFontAttributeName];
     
-    [menuAttributes setObject:[NSColor redColor]
-                       forKey:NSForegroundColorAttributeName];	
     
     taskContents = [NSString stringWithContentsOfFile:pendingPath
                                              encoding:NSASCIIStringEncoding
                                                 error:&err];
     
     if (err) {
+        [menuAttributes setObject:[NSColor grayColor]
+                           forKey:NSForegroundColorAttributeName];	
         statusTitle = @"install taskwarrior";
     } else {
         NSArray *tasks = [taskContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
@@ -50,8 +50,12 @@
             }
         }
         if (overdue > 0) {
-            statusTitle = [NSString stringWithFormat:@"%d (%d)", [tasks count], overdue];
+            [menuAttributes setObject:[NSColor redColor]
+                               forKey:NSForegroundColorAttributeName];	
+            statusTitle = [NSString stringWithFormat:@"%dx%d", [tasks count], overdue];
         } else {
+            [menuAttributes setObject:[NSColor blackColor]
+                               forKey:NSForegroundColorAttributeName];	
             statusTitle = [NSString stringWithFormat:@"%d", [tasks count]];
         }
     }
@@ -65,9 +69,8 @@
 	self = [super init];
 	if(self)
 	{
-        pendingPath = [[NSString alloc] retain];
         taskContents = [[NSString alloc] retain];
-        pendingPath = [@"~/.task/pending.data" stringByExpandingTildeInPath];
+        pendingPath = [[@"~/.task/pending.data" stringByExpandingTildeInPath] retain];
 		menu                     = [[NSMenu alloc] init];
         
         // Set up my status item
