@@ -14,6 +14,7 @@
     NSMenu *menu;
     NSTimer *automaticUpdateTimer;
     NSString *pendingPath;
+    NSString *taskContents;
     NSMenuItem *quitMI;
     NSMenuItem *aboutMI;
 }

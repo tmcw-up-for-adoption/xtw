@@ -13,20 +13,25 @@
 {
     NSString *statusTitle = nil;
     NSError *err = nil;
+    NSInteger timestamp = (long)[[NSDate date] timeIntervalSince1970];
+    NSInteger overdue = 0;
     
     NSMutableArray *taskData = nil;
     
     NSMutableDictionary *menuAttributes = [NSMutableDictionary dictionary];
-    NSFont *displayFont = [NSFont fontWithName:@"Helvetica Neue" size:20];
+    NSFont *displayFont = [NSFont fontWithName:@"Helvetica Neue"
+                                          size:20];
     if (!displayFont)
         displayFont = [NSFont boldSystemFontOfSize:22];
         
-    NSString *taskcontents = [NSString stringWithContentsOfFile:pendingPath encoding:NSASCIIStringEncoding error:&err];
+    taskContents = [NSString stringWithContentsOfFile:pendingPath
+                                             encoding:NSASCIIStringEncoding
+                                                error:&err];
     
     if (err) {
         statusTitle = @"install taskwarrior";
     } else {
-        NSArray *tasks = [taskcontents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        NSArray *tasks = [taskContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
         
         NSEnumerator *e = [tasks objectEnumerator];
         id object;
@@ -34,18 +39,26 @@
         NSScanner *dueScanner;
         while (object = [e nextObject]) {
             dueScanner = [NSScanner scannerWithString:object];
-            [dueScanner scanString:@"due\"" intoString:NULL];
+            [dueScanner scanUpToString:@"due:\"" intoString:nil];
+            [dueScanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:nil];
             if ([dueScanner isAtEnd] == NO) {
                 [dueScanner scanInteger:&dueDate];
-                NSLog(@"due date: %@", dueDate);
+                if (dueDate < timestamp) {
+                    overdue++;
+                }
             }
         }
-    
-        statusTitle = [NSString stringWithFormat:@"%d", [tasks count]];
+        if (overdue > 0) {
+            statusTitle = [NSString stringWithFormat:@"%d | %d", overdue, [tasks count]];
+        } else {
+            statusTitle = [NSString stringWithFormat:@"%d", [tasks count]];
+        }
     }
     
     
-    [statusItem setAttributedTitle:[[[NSAttributedString alloc] initWithString:statusTitle attributes:menuAttributes] autorelease]];
+    [statusItem setAttributedTitle:[[[NSAttributedString alloc]
+                                     initWithString:statusTitle
+                                     attributes:menuAttributes] autorelease]];
 }
 - (id)init
 {
@@ -53,6 +66,7 @@
 	if(self)
 	{
         pendingPath = [[NSString alloc] retain];
+        taskContents = [[NSString alloc] retain];
         pendingPath = [@"~/.task/pending.data" stringByExpandingTildeInPath];
 		menu                     = [[NSMenu alloc] init];
         
