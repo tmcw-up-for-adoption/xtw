@@ -15,7 +15,7 @@
     NSError *err = nil;
     
     NSMutableDictionary *menuAttributes = [NSMutableDictionary dictionary];
-    NSFont *displayFont = [NSFont fontWithName:@"Arial Black" size:20];
+    NSFont *displayFont = [NSFont fontWithName:@"Helvetica Neue" size:20];
     if (!displayFont)
         displayFont = [NSFont boldSystemFontOfSize:22];
     
@@ -36,7 +36,21 @@
         statusItem               = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
         [statusItem setMenu:menu];
         [statusItem retain];
-
+        [statusItem setToolTip:@"taskwarrior"];
+        [statusItem setHighlightMode:YES];
+        quitMI = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"Quit",@"") 
+                                             action:@selector(terminate:) 
+                                      keyEquivalent:@""] autorelease];
+        
+        aboutMI = [[[NSMenuItem alloc] initWithTitle:NSLocalizedString(@"About xtw",@"")
+                                              action:@selector(orderFrontStandardAboutPanel:)
+                                       keyEquivalent:@""] autorelease];
+        
+        [quitMI setTarget:NSApp];	
+        [aboutMI setTarget:NSApp];
+        [menu addItem:aboutMI];
+        [menu addItem:[NSMenuItem separatorItem]];
+        [menu addItem:quitMI];
         
         automaticUpdateTimer     = [[NSTimer scheduledTimerWithTimeInterval:10
 																	 target:self

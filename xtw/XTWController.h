@@ -13,5 +13,7 @@
     NSStatusItem *statusItem;
     NSMenu *menu;
     NSTimer *automaticUpdateTimer;
+    NSMenuItem *quitMI;
+    NSMenuItem *aboutMI;
 }
 @end
